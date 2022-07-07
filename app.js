@@ -22,14 +22,21 @@ function doApi(){
     
     let Downhour = Uphour + 12;
     
-    let BASE_API = `today is  ${getMmDay}th, Tide Up time is  ${Uphour}:${minute}PM and Tide Down time is ${Downhour}:${minute}PM`;
-    
-    let BASE_API1 = `ဒီနေ့ကမြန်မာလို ${getMmDay} ရက်နေ့ဖြစ်ပြီး , ဒီ‌နေ့ ${Uphour}နာရီ${minute}မိနစ်မှာရေတက်ပါမည်။ရေကျမဲ့အချိန်ကတော့${Downhour}နာရီ${minute}မိနစ်ဖြစ်ပါတယ်။`;
-    
+    let BASE_API = {
+        getHour : Uphour,
+        getDownHour : Downhour,
+        getMinute : minute
+    };
     console.log(BASE_API);
-    let dataApi = document.querySelector('.api');
-    let mmApi = document.querySelector('.mmApi');
-     dataApi.innerHTML = BASE_API;
-     mmApi.innerHTML = BASE_API1;
+    
+    // let BASE_API2 = `today is  ${getMmDay}th, Tide Up time is  ${Uphour}:${minute}PM and Tide Down time is ${Downhour}:${minute}PM`;
+    
+    // let BASE_API1 = `ဒီနေ့ကမြန်မာလို ${getMmDay} ရက်နေ့ဖြစ်ပြီး , ဒီ‌နေ့ ${Uphour}နာရီ${minute}မိနစ်မှာရေတက်ပါမည်။ရေကျမဲ့အချိန်ကတော့${Downhour}နာရီ${minute}မိနစ်ဖြစ်ပါတယ်။`;
+    
    };
+
 Api();
+
+
+
+
