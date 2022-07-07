@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nandakyawwin/Yangon-River-Tide-Algorithm#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "prompt": "^1.3.0"
   }
 }
