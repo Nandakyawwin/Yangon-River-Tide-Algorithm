@@ -18,7 +18,6 @@
 Using npm:
 ```shell
 $ npm i myanmar-tide-algorithm
-
 Note: add `--save` if you are using npm < 5.0.0
 
 In Node.js:
