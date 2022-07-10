@@ -1,90 +1,25 @@
+let errorMsg = {
+    msg : "error",
+    msg_content : `Myanmar Date valid number are 1 to 15. မြန်မာပြက္ခဒိန်တွင် ရက်သည် ၁ မှ ၁၅ အထိသာရှိပါသည်။ မိမိထည့်သွင်းသောရက်မှာ  ဖြစ်နေပါသည်။`,
+};
 
-var prompt = require('prompt');
 
-  prompt.start();
+let Tide = function (mmd){
+    return new Promise( (resolve,reject)=>{
+        let exp = mmd == 0 || mmd > 15;
+        if(!exp) resolve(doApi(mmd))
+        else reject(errorMsg)
+    })
+}
 
-  prompt.get(['mmdate'], function (err, result) {
-    
-     let errorMsg = `Myanmar Date valid number are 1 to 15. မြန်မာပြက္ခဒိန်တွင် ရက်သည် ၁ မှ ၁၅ အထိသာရှိပါသည်။ မိမိထည့်သွင်းသောရက်မှာ  ဖြစ်နေပါသည်။`;
+function doApi(mmd = 2){
+    var Uphour = Math.floor(((mmd * 100) - (mmd * 25)) /100);
+    var minute = (((mmd * 100) - (mmd * 25)) - Uphour * 100) / 25 * 15;
+    var Downhour = Uphour + 6;
+    let BASE_API  = {
+        Uphour,
+        minute,
+       Downhour
+   }};
 
-    // let value = result.mmdate;
-
-    // console.log( result.mmdate);
-     let value = result.mmdate;
-    //  console.log( value);
-     if(value.type ==! Number){
-         console.log(errorMsg);
-     }else{
-     console.log('you typed ' + value);
-
-     }
-// let ppt = value;
-
-// console.log(ppt);
-
-// function Api()
-
-// {
-
-// if(ppt == 0 || ppt > 15)
-
-// {
-
-//     console.log(errorMsg);
-
-// }
-// else
-// {
-
-//     doApi();
-
-// }
-
-// }
-
-function doApi()
-
-{
-
-    let getMmDay = ppt;
-
-    let getday = getMmDay * 100; 
-
-    let hourbytide = getMmDay * 25; 
-
-    let result = getday - hourbytide; 
-
-    let tidebyhour = result /100; 
-
-    let Uphour = Math.floor(tidebyhour);
-
-    let tidebyminute = result - Uphour * 100;
-
-    let divd = tidebyminute / 25;
-
-    let minute = divd * 15;
-    
-    let Downhour = Uphour + 6;
-    
-    class BASE_API  
-
-    {
-
-         Uphour;
-
-         Downhour;
-
-         minute;
-    };
-
-    console.log(BASE_API);
-    
-   };
-
-// Api();
-
-    
-
-    // }
-
-});
+module.exports  = Tide;
