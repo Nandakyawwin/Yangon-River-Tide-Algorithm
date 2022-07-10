@@ -20,6 +20,8 @@ function doApi(mmd = 2){
         Uphour,
         minute,
        Downhour
-   }};
+   }
+    console.log(BASE_API);
+    };
 
 module.exports  = Tide;
