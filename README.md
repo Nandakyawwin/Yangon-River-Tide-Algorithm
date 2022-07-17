@@ -1,5 +1,5 @@
 ﻿# Yangon-River-Tide-Algorithm
-
+[<img src="https://github.com/Nandakyawwin/Yangon-River-Tide-Algorithm/blob/main/tide.png">](https://github.com/Nandakyawwin/Yangon-River-Tide-Algorithm)
 ## ဤAlgorithm အကြောင်း
 
 ဤ Algorithm သည် မြန်မာပြက္ခဒီန်ရက်များကိုအသုံးပြု၍ ရန်ကုန်မြစ်အတွင်းသို့ ပင်လယ်ထဲမှ ရေတက်လာသောအချိန်နှင့် ရေတက်‌ချိန် ရေကျချိန်တို့ကို တွက်ချက်ပေးနိုင်သောalgorithmတခုဖြစ်ပါသည်။
