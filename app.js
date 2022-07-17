@@ -21,7 +21,7 @@ function doApi(mmd = 2){
         minute,
        Downhour
    }
-    console.log(BASE_API);
+    return BASE_API;
     };
 
 module.exports  = Tide;
